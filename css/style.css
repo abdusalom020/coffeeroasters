@@ -114,7 +114,7 @@ img {
   padding: 0;
   width: 16px;
   height: 15px;
-  background-image: url(../img/navbar.png);
+  background-image: url(../img/navbar.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -127,7 +127,7 @@ img {
   position: absolute;
   z-index: 1;
   top: 100%;
-  height: calc(100vh - 90px);
+  height: calc(300vh - 90px);
   left: -25px;
   right: -25px;
   text-align: center;
@@ -198,6 +198,7 @@ img {
     right: 0;
     height: auto;
     display: block;
+    background-image: none;
   }
 
   .navbar__list{
@@ -232,6 +233,10 @@ img {
     padding-top: 44px;
     padding-bottom: 44px;
   }
+
+  .navbar{
+    background-image: none;
+  }
 }
 
 /* HERO */
@@ -249,6 +254,7 @@ img {
   background-image: url(../img/coffee-homepage.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .hero__heading {
@@ -302,6 +308,7 @@ img {
   .hero-container{
     display: block;
     padding: 104px 58px;
+    border-radius: 10px;
     background-image: url(../img/hero-700.jpg);
   }
 
@@ -353,7 +360,6 @@ img {
   z-index: 1;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: #fefcf7;
 }
 
 .collections__heading {
@@ -474,8 +480,8 @@ img {
   .collections__heading{
     top: 180px;
     left: calc(50% - 550px);
-    font-size: 155px;
-    line-height: 155px;
+    font-size: 150px;
+    line-height: 1;
   }
 
   .collections__list{
@@ -519,14 +525,12 @@ img {
 
 /* PRICES */
 
-.prices {
-
-}
-
 .prices__box{
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
+  height: 900px;
   background-color: #2c343e;
   padding: 64px 24px 661px;
 }
@@ -543,7 +547,9 @@ img {
 }
 
 .prices__text {
+  width: 279px;
   margin: 0;
+  flex-shrink: 0;
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;
@@ -552,16 +558,14 @@ img {
 }
 
 .prices__list {
-  position: absolute;
-  z-index: 1;
-  top: 305px;
-  left: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-top: 64px;
 }
 
 .prices__item {
@@ -625,12 +629,17 @@ img {
 
 @media only screen and (min-width: 650px) {
   .prices__box{
+    height: 573px;
     padding: 56px 74px 368px;
   }
 
   .prices__heading{
     font-size: 32px;
     line-height: 48px;
+  }
+
+  .prices__text{
+    width: 540px;
   }
 
   .prices__list{
