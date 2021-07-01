@@ -1489,6 +1489,7 @@ img {
   .quarter__container {
     padding-top: 168px;
     padding-bottom: 168px;
+    padding-left: 85px;
   }
   
   .quarter__item:not(:last-child) {
