@@ -2103,15 +2103,27 @@ img {
 
 .modal {
   position: fixed;
-  /* display: none; */
+  display: none;
   z-index: 99;
-  height: 100vh;
   overflow: auto;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+.modal__part{
+  display: block;
+  width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.modal--open{
+  display: block;
+} 
 
 .modal__heading {
   margin: 0;
@@ -2167,7 +2179,10 @@ img {
 }
 
 @media only screen and (min-width: 650px) {
-  
+  .modal__part{
+    width: 540px;
+  }
+
   .modal__heading {
     font-size: 40px;
     line-height: 48px;
@@ -2215,7 +2230,7 @@ img {
   .modal__link-mobile {
     display: none;
   }
-  
+
 }
 
 
